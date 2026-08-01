@@ -1,0 +1,32 @@
+generated: '2026-07-20'
+method: searched
+source: https://docs.px.dev/reference/admin/api-keys/
+summary:
+  types:
+  - apiKey
+  api_key_in:
+  - metadata
+  oauth2_flows: []
+  note: >-
+    Pixie has no OpenAPI (gRPC-only API), so this profile is captured from the
+    provider docs rather than derived from a spec.
+schemes:
+- name: PixieApiKey
+  type: apiKey
+  in: metadata
+  description: >-
+    Opaque API key (prefix px-api-) created with `px api-key create` or in the
+    Live UI Admin > API Keys tab. Passed to the client library at construction
+    (Go pxapi.WithAPIKey(...), Python pxapi.Client(token=...)) and sent on the
+    gRPC connection to Pixie Cloud/Vizier. A Cluster ID identifies the target
+    cluster.
+  key_prefix: px-api-
+  docs: https://docs.px.dev/reference/admin/api-keys/
+- name: PixieDeployKey
+  type: apiKey
+  in: metadata
+  description: >-
+    Deploy keys (`px deploy-key`) are a distinct credential used when deploying
+    Pixie (Vizier) to register a new cluster with Pixie Cloud; not used for API
+    script execution.
+  docs: https://docs.px.dev/reference/admin/deploy-keys/

@@ -1,7 +1,16 @@
 aid: pixie-labs
-name: Pixie Labs *
-description: 'Pixie Labs * is a company surfaced as a portfolio company of gv and added to the API Evangelist
-  network as a stub for enrichment. Sector: ai. This profile is a lead awaiting the enrichment pipeline.'
+name: Pixie Labs
+description: >-
+  Pixie Labs built Pixie, an open-source, Kubernetes-native application
+  observability and debugging platform that uses dynamic eBPF probes to
+  auto-instrument workloads and capture metrics, events, full-body traces, and
+  logs in seconds without code changes. Data is collected and queried in-cluster
+  via PxL scripts, avoiding costly telemetry export. Pixie Labs was acquired by
+  New Relic in December 2020; the project was contributed to the Cloud Native
+  Computing Foundation (CNCF) as a sandbox project and is developed in the open
+  at px.dev under the pixie-io GitHub organization. Pixie exposes a gRPC API
+  (Pixie Cloud for cluster discovery/management and Pixie Vizier for PxL script
+  execution) with first-party Go and Python client libraries and the px CLI.
 url: https://raw.githubusercontent.com/api-evangelist/pixie-labs/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,13 +18,66 @@ x-backed-by:
 - gv
 x-tier: stub
 x-tier-reason: portfolio-lead
+x-status-note: >-
+  pixielabs.ai no longer resolves; Pixie Labs was acquired by New Relic (2020)
+  and the product lives on as the open-source CNCF project Pixie at px.dev
+  (GitHub org pixie-io).
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
+x-enrichment:
+  date: '2026-07-20'
+  status: enriched
+  artifacts_added: 12
+  pass: local-v1
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-20'
+image: https://raw.githubusercontent.com/pixie-io/pixie/main/.readme_assets/pixie_banner.png
 tags:
 - Company
 - Ai
-apis: []
+- Observability
+- Kubernetes
+- eBPF
+- Monitoring
+- Tracing
+- Open Source
+- CNCF
+- gRPC
+- Developer Tools
+apis:
+- name: Pixie API
+  description: >-
+    Pixie's gRPC API for programmatically running PxL scripts against live
+    Kubernetes clusters and managing Pixie Cloud resources. Two services:
+    Pixie Cloud (cluster discovery, API/deploy keys, artifacts, plugins) and
+    Pixie Vizier (ExecuteScript streaming query execution, health checks).
+    First-party Go (px.dev/pxapi) and Python (pxapi) client libraries wrap the
+    gRPC transport and handle API-key auth and result table streaming.
+  humanURL: https://docs.px.dev/reference/api/overview/
+  baseURL: https://work.withpixie.ai
+  tags:
+  - Observability
+  - gRPC
+  - Kubernetes
+  - eBPF
+  properties:
+  - type: Protobuf
+    name: Pixie Vizier API proto
+    url: grpc/pixie-labs-vizierapi.proto
+  - type: Protobuf
+    name: Pixie Cloud API proto
+    url: grpc/pixie-labs-cloudapi.proto
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -23,4 +85,40 @@ maintainers:
   email: info@apis.io
 common:
 - type: Website
-  url: http://pixielabs.ai
+  url: https://px.dev
+- type: DeveloperPortal
+  url: https://docs.px.dev
+- type: Documentation
+  url: https://docs.px.dev
+- type: APIReference
+  url: https://docs.px.dev/reference/api/overview/
+- type: GettingStarted
+  url: https://docs.px.dev/using-pixie/api-quick-start/
+- type: Support
+  url: https://px.dev/community/
+- type: Blog
+  url: https://blog.px.dev
+- type: GitHubOrganization
+  url: https://github.com/pixie-io
+- type: Packages
+  url: packages/pixie-labs-packages.yml
+- type: SDKs
+  url: packages/pixie-labs-packages.yml
+- type: CLI
+  url: cli/pixie-labs-cli.yml
+- type: Authentication
+  url: authentication/pixie-labs-authentication.yml
+- type: Conventions
+  url: conventions/pixie-labs-conventions.yml
+- type: ChangeLog
+  url: changelog/pixie-labs-changelog.yml
+- type: Conformance
+  url: conformance/pixie-labs-conformance.yml
+- type: DomainSecurity
+  url: security/pixie-labs-domain-security.yml
+- type: WellKnown
+  url: well-known/pixie-labs-well-known.yml
+- type: LLMsTxt
+  url: llms/pixie-labs-llms.txt
+- type: AgentSkill
+  url: skills/_index.yml
