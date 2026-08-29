@@ -22,6 +22,17 @@ x-status-note: >-
   pixielabs.ai no longer resolves; Pixie Labs was acquired by New Relic (2020)
   and the product lives on as the open-source CNCF project Pixie at px.dev
   (GitHub org pixie-io).
+deliveryModel:
+  model: library
+  open_source: false
+  commercial: false
+  callable_host: false
+  label: Library · distributed through package registries, no callable service
+  confidence: low
+  source:
+  - none
+  generated: '2026-08-28'
+  method: derived
 accessModel:
   pricing: unknown
   onboarding: self-serve
