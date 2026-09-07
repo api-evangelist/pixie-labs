@@ -146,3 +146,5 @@ common:
   url: llms/pixie-labs-llms.txt
 - type: AgentSkill
   url: skills/_index.yml
+x-parent: pixie
+x-relationship: product
