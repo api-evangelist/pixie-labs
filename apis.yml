@@ -108,6 +108,34 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: IssueTracker
+  url: https://github.com/pixie-io/pixie/issues
+- type: Releases
+  url: https://github.com/pixie-io/pixie/releases
+- type: SecurityPolicy
+  url: https://github.com/pixie-io/pixie/blob/main/SECURITY.md
+- type: CodeOfConduct
+  url: https://github.com/pixie-io/pixie/blob/main/CODE_OF_CONDUCT.md
+- type: ContributionGuide
+  url: https://github.com/pixie-io/pixie/blob/main/CONTRIBUTING.md
+- type: License
+  url: https://github.com/pixie-io/pixie/blob/main/LICENSE
+- type: AgenticAccess
+  url: agentic-access/pixie-labs-agentic-access.yml
+- type: LinkedIn
+  url: https://www.linkedin.com/company/pixieai
+- type: JSONLD
+  url: json-ld/pixie-labs-context.jsonld
+- type: JSONSchema
+  url: json-schema/pixie-labs-pxl-script-schema.json
+- type: JSONSchema
+  url: json-schema/pixie-labs-plugin-schema.json
+- type: GitHubRepository
+  url: https://github.com/pixie-io/pixie
+- type: Community
+  url: https://px.dev/community/
+- type: Slack
+  url: https://slackin.px.dev/
 - type: Website
   url: https://px.dev
 - type: DeveloperPortal
@@ -146,5 +174,3 @@ common:
   url: llms/pixie-labs-llms.txt
 - type: AgentSkill
   url: skills/_index.yml
-x-parent: pixie
-x-relationship: product
